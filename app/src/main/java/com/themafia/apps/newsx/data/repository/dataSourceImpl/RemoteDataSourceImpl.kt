@@ -6,9 +6,8 @@ import com.themafia.apps.newsx.data.retrofit.dataclasses.APIResponse
 import retrofit2.Response
 
 class RemoteDataSourceImpl(private val newsService: NewsService,
-                           private val country : String ,
-                           private val page : Int) : RemoteDataSource {
+                           ) : RemoteDataSource {
 
-    override suspend fun getTopHeadlines(): Response<APIResponse> = newsService.getTopHeadlines(country, page)
+    override suspend fun getTopHeadlines(country : String , page : Int): Response<APIResponse> = newsService.getTopHeadlines(country, page)
 
 }

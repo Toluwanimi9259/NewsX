@@ -5,5 +5,5 @@ import com.themafia.apps.newsx.data.util.Resource
 import com.themafia.apps.newsx.domain.repository.Repository
 
 class GetNewsHeadlinesUseCase(private val repository: Repository) {
-    suspend fun execute() : Resource<APIResponse> = repository.getNewsHeadlines()
+    suspend fun execute(country: String, page: Int): Resource<APIResponse> = repository.getNewsHeadlines(country, page)
 }
