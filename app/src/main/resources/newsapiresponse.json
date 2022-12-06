@@ -1,0 +1,266 @@
+{
+  "status": "ok",
+  "totalResults": 35,
+  "articles": [
+    {
+      "source": {
+        "id": "abc-news",
+        "name": "ABC News"
+      },
+      "author": "Bill Hutchinson, Aaron Katersky, Matt Foster",
+      "title": "Power outages in North Carolina suspected as 'intentional vandalism': Sheriff - ABC News",
+      "description": "Tens of thousands of customers were without electricity amid freezing weather.",
+      "url": "https://abcnews.go.com/US/intentional-vandalism-suspected-north-carolina-county-power-outage/story?id=94438516",
+      "urlToImage": "https://s.abcnews.com/images/US/north-carolina-power-outage-rt-lv-221205_1670261987356_hpMain_16x9_992.jpg",
+      "publishedAt": "2022-12-05T18:11:15Z",
+      "content": "Vandals wielding firearms are suspected of causing a major power outage across a North Carolina county that has plunged tens of thousands of customers into darkness amid freezing temperatures, accord… [+5219 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "ESPN"
+      },
+      "author": null,
+      "title": "Sources - New York Mets, Justin Verlander reach agreement - ESPN",
+      "description": "Justin Verlander, who won his third Cy Young Award after leading the Astros to the World Series title, has a 2-year deal with the Mets, sources told ESPN's Jeff Passan.",
+      "url": "https://www.espn.com/mlb/story/_/id/35189145/sources-new-york-mets-justin-verlander-reach-agreement",
+      "urlToImage": "https://a3.espncdn.com/combiner/i?img=%2Fphoto%2F2022%2F0824%2Fr1052325_1296x729_16%2D9.jpg",
+      "publishedAt": "2022-12-05T18:06:56Z",
+      "content": "Three-time Cy Young Award winner Justin Verlander has agreed to a two-year, $86 million deal with the New York Mets, sources told ESPN's Jeff Passan on Monday.\r\nThe deal includes a vesting third-year… [+2900 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "CNBC"
+      },
+      "author": "Rebecca Picciotto",
+      "title": "U.S. again delays deadline for Real IDs, until May 2025 - CNBC",
+      "description": "Homeland Security has delayed the enforcement of the Real ID Act for a period of two years.",
+      "url": "https://www.cnbc.com/2022/12/05/us-again-delays-deadline-for-real-ids-until-may-2025.html",
+      "urlToImage": "https://image.cnbcfm.com/api/v1/image/107161121-1670257856966-gettyimages-1361930770-4045_48_covid_travel_63d_ry.jpeg?v=1670261514&w=1920&h=1080",
+      "publishedAt": "2022-12-05T17:31:54Z",
+      "content": "U.S. officials are delaying for two more years the enforcement of a rule requiring people to get new identification cards to board domestic flights, access federal facilities or enter nuclear plants.… [+1609 chars]"
+    },
+    {
+      "source": {
+        "id": "cnn",
+        "name": "CNN"
+      },
+      "author": "Jackie Wattles",
+      "title": "NASA's Orion capsule makes farewell flyby of the moon - CNN",
+      "description": "The historic Artemis I mission, which is sending an uncrewed spacecraft on an unprecedented trip around the moon, is now on the final stretch of its historic journey.",
+      "url": "https://www.cnn.com/2022/12/05/world/nasa-artemis-1-moon-flyby-return-scn/index.html",
+      "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/221205121633-05-nasa-artemis-i-moon-flyby-return-screenshot.jpg?c=16x9&q=w_800,c_fill",
+      "publishedAt": "2022-12-05T17:28:00Z",
+      "content": "Sign up for CNNs Wonder Theory science newsletter. Explore the universe with news on fascinating discoveries, scientific advancements and more.\r\nThe historic Artemis I mission, which is sending an un… [+3195 chars]"
+    },
+    {
+      "source": {
+        "id": "usa-today",
+        "name": "USA Today"
+      },
+      "author": "John Bacon, USA TODAY",
+      "title": "Ukraine live updates: Putin drives across bombed-out Crimean bridge - USA TODAY",
+      "description": "Putin drove a car across the Crimean bridge Monday, 2 months after a truck bombing that Russian officials blamed on Ukrainian terrorism. Live updates.",
+      "url": "https://www.usatoday.com/story/news/world/2022/12/05/ukraine-russia-live-updates/10837355002/",
+      "urlToImage": "https://www.gannett-cdn.com/presto/2022/12/05/USAT/dd738845-db88-48f9-8fc4-f76a3b35761c-AP_Russia_Opposition.jpg?auto=webp&crop=6999,3937,x0,y233&format=pjpg&width=1200",
+      "publishedAt": "2022-12-05T17:15:00Z",
+      "content": "Russian President Vladimir Putin drove a Mercedes across the Crimean bridge Monday, two months after it was severely damaged in a truck bombing Russian officials blamed on a Ukrainian terrorist attac… [+5499 chars]"
+    },
+    {
+      "source": {
+        "id": "reuters",
+        "name": "Reuters"
+      },
+      "author": null,
+      "title": "FX swap debt a $80 trillion 'blind spot' global regulator says - Reuters",
+      "description": "Pension funds and other 'non-bank' financial firms have more than $80 trillion of hidden, off-balance sheet dollar debt in FX swaps, the Bank for International Settlements (BIS) said.",
+      "url": "https://www.reuters.com/markets/currencies/global-markets-bis-urgent-2022-12-05/",
+      "urlToImage": "https://www.reuters.com/resizer/zi4iSdLWTONsIyLNrMhrP-v70KQ=/1200x628/smart/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/3OSKK2XRINM2FH7GKCCLX3STMY.jpg",
+      "publishedAt": "2022-12-05T16:58:00Z",
+      "content": "LONDON, Dec 5 (Reuters) - Pension funds and other 'non-bank' financial firms have more than $80 trillion of hidden, off-balance sheet dollar debt in FX swaps, the Bank for International Settlements (… [+4162 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "CBS Sports"
+      },
+      "author": "",
+      "title": "2022 College Football Playoff predictions, picks: Georgia the team to beat, but TCU brings chaos element - CBS Sports",
+      "description": "The Horned Frogs are in the playoff for the first time, and they are the biggest underdogs in the field",
+      "url": "https://www.cbssports.com/college-football/news/2022-college-football-playoff-predictions-picks-georgia-the-team-to-beat-but-tcu-brings-chaos-element/",
+      "urlToImage": "https://sportshub.cbsistatic.com/i/r/2022/12/05/c49e4f6d-52d8-4197-92ff-5f905f4c10d3/thumbnail/1200x675/8ccf99ba4cb3577ae48a0c51e51b700c/graphic-cfpepearly.png",
+      "publishedAt": "2022-12-05T16:49:00Z",
+      "content": "Sometimes, it's better not to overthink things. The College Football Playoff Selection Committee got it right. No ifs, ands or but-we-would-have-been-favored-over-everybodies about it.\r\nTalking to yo… [+7904 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Panthers.com"
+      },
+      "author": "Darin Gantt",
+      "title": "Panthers release Baker Mayfield - Panthers.com",
+      "description": "The Panthers parted ways with the veteran quarterback Monday, after they moved PJ Walker ahead of him on the depth chart.",
+      "url": "https://www.panthers.com/news/panthers-release-baker-mayfield",
+      "urlToImage": "https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/panthers/nkow6qmmahayo3g1rypi",
+      "publishedAt": "2022-12-05T16:36:04Z",
+      "content": "Mayfield started the first five games, but only won one of those (against the Saints in Week 3). His best game was his first one, as he threw for a season-high 235 yards with a touchdown and an inter… [+591 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "New York Post"
+      },
+      "author": "Reuven Fenton, Jorge Fitz-Gibbon",
+      "title": "Notorious 'Torso Killer' admits to five more slays on Long Island - New York Post ",
+      "description": "Richard Cottingham, the notorious serial murderer known as the “Torso Killer” admitted to five more slayings on Long Island on Monday.",
+      "url": "https://nypost.com/2022/12/05/notorious-torso-killer-admits-to-five-more-slays-on-long-island/",
+      "urlToImage": "https://nypost.com/wp-content/uploads/sites/2/2022/12/torso-killer-1.jpg?quality=75&strip=all&w=1024",
+      "publishedAt": "2022-12-05T16:32:00Z",
+      "content": "The notorious serial murderer known as the “Torso Killer” on Monday admitted to five more slayings on Long Island — adding to a bloody tally that already has him serving a life sentence.\r\nRichard Cot… [+4549 chars]"
+    },
+    {
+      "source": {
+        "id": "cnn",
+        "name": "CNN"
+      },
+      "author": "Sandee LaMotte",
+      "title": "Dementia risk may increase if you're eating these foods, study says - CNN",
+      "description": "Eating ultraprocessed foods such as hot dogs, French fries, sodas, cookies and ice cream could set you on the road to cognitive decline, a new study revealed, but there is a way to overcome the negative impact.",
+      "url": "https://www.cnn.com/2022/12/05/health/dementia-ultraprocessed-food-wellness/index.html",
+      "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/221202131016-dementia-ultraprocessed-food-wellness-stock.jpg?c=16x9&q=w_800,c_fill",
+      "publishedAt": "2022-12-05T16:30:00Z",
+      "content": "Editors Note: Sign up for CNNs Eat, But Better: Mediterranean Style. Our eight-part guide shows you a delicious expert-backed eating lifestyle that will boost your health for life.\r\nWe all eat them u… [+5678 chars]"
+    },
+    {
+      "source": {
+        "id": "the-washington-post",
+        "name": "The Washington Post"
+      },
+      "author": "Eugene Scott",
+      "title": "Paul Pelosi attends Kennedy Center Honors in first public appearance since attack - The Washington Post",
+      "description": "The House speaker’s husband received a thunderous standing ovation as he accompanied his wife to the storied event in the Kennedy Center’s Opera House.",
+      "url": "https://www.washingtonpost.com/politics/2022/12/05/paul-pelosi-kennedy-center-honors-attack/",
+      "urlToImage": "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/BCWN6EUQAAR47YE4SCOFCOVV5U.jpg&w=1440",
+      "publishedAt": "2022-12-05T16:28:00Z",
+      "content": "Comment on this story\r\nPaul Pelosi, the husband of House Speaker Nancy Pelosi (D-Calif.), made his first public appearance Sunday at the Kennedy Center Honors since being violently attacked at the co… [+3117 chars]"
+    },
+    {
+      "source": {
+        "id": "google-news",
+        "name": "Google News"
+      },
+      "author": null,
+      "title": "Pence pushes back on Trump’s call to terminate the Constitution - The Hill",
+      "description": null,
+      "url": "https://news.google.com/__i/rss/rd/articles/CBMic2h0dHBzOi8vdGhlaGlsbC5jb20vaG9tZW5ld3MvYWRtaW5pc3RyYXRpb24vMzc2MjE2OS1wZW5jZS1wdXNoZXMtYmFjay1vbi10cnVtcHMtY2FsbC10by10ZXJtaW5hdGUtdGhlLWNvbnN0aXR1dGlvbi_SAXdodHRwczovL3RoZWhpbGwuY29tL2hvbWVuZXdzL2FkbWluaXN0cmF0aW9uLzM3NjIxNjktcGVuY2UtcHVzaGVzLWJhY2stb24tdHJ1bXBzLWNhbGwtdG8tdGVybWluYXRlLXRoZS1jb25zdGl0dXRpb24vYW1wLw?oc=5",
+      "urlToImage": null,
+      "publishedAt": "2022-12-05T16:14:00Z",
+      "content": null
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "GameSpot"
+      },
+      "author": "Darryn Bonthuys",
+      "title": "The Best Switch Games Of 2022 According To Metacritic - GameSpot",
+      "description": "From Bayonetta 3 to Beacon Pines, 2022 was a strong year for the Switch as it flexed its first and third-party game muscles.",
+      "url": "https://www.gamespot.com/gallery/the-best-switch-games-of-2022-according-to-metacritic/2900-4480/",
+      "urlToImage": "https://www.gamespot.com/a/uploads/screen_kubrick/1601/16018044/4069295-bestswitchgamesmetacritic.jpg",
+      "publishedAt": "2022-12-05T15:59:12Z",
+      "content": "The products discussed here were independently chosen by our editors.\r\n GameSpot may get a share of the revenue if you buy anything featured on our site."
+    },
+    {
+      "source": {
+        "id": "the-washington-post",
+        "name": "The Washington Post"
+      },
+      "author": "John Wagner, Mariana Alfaro",
+      "title": "Post Politics Now: Warnock, Walker make final pitches in Georgia Senate runoff - The Washington Post",
+      "description": "Both campaigns are making stops designed to energize base voters in a race in which turnout will be key.",
+      "url": "https://www.washingtonpost.com/politics/2022/12/05/warnock-walker-georiga-runoff-trump-constitution/",
+      "urlToImage": "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/O677PL6VR35CUNBXTAH5RDQW2I.JPG&w=1440",
+      "publishedAt": "2022-12-05T15:56:16Z",
+      "content": "Second gentleman Doug Emhoff will convene a gathering Wednesday with Jewish leaders to discuss the rise of antisemitism in the United States and efforts to combat hate in the nation, the White House … [+628 chars]"
+    },
+    {
+      "source": {
+        "id": "cnn",
+        "name": "CNN"
+      },
+      "author": "Melissa Alonso, Devon M. Sayers",
+      "title": "Tampa Police Chief Mary O'Connor resigns after flashing badge and asking to be let go from a traffic stop - CNN",
+      "description": "O'Connor was put on administrative leave after body camera footage taken from a traffic stop last month revealed she told a sheriff's deputy she was \"hoping that you'll just let us go tonight\" and showed her badge.",
+      "url": "https://www.cnn.com/2022/12/05/us/tampa-police-chief-mary-oconnor-resigns/index.html",
+      "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/221204131335-tampa-police-chief-badge-body-cam.jpg?c=16x9&q=w_800,c_fill",
+      "publishedAt": "2022-12-05T15:33:00Z",
+      "content": "A Florida police chief who flashed her badge and asked to be let go from a traffic stop has resigned, Tampa officials said Monday. \r\nTampa Mayor Jane Castor has requested and received the resignation… [+2644 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Variety"
+      },
+      "author": "Brian Steinberg",
+      "title": "ABC News Benches Amy Robach, T.J. Holmes After Romance Disclosure - Variety",
+      "description": "Amy Robach and T.J. Holmes will be benched from their anchoring duties at ABC News’ “GMA3′ while the news division weighs the effect their recent disclosure of a romantic relationship might have on the program and the company, ABC News President Kim Godwin in…",
+      "url": "https://variety.com/2022/tv/news/abc-news-benches-amy-robach-t-j-holmes-gma3-1235450141/",
+      "urlToImage": "https://variety.com/wp-content/uploads/2022/12/Collage-Maker-05-Dec-2022-10.16-AM-e1670253410109.jpg?w=995&h=560&crop=1",
+      "publishedAt": "2022-12-05T15:20:00Z",
+      "content": "Amy Robach and T.J. Holmes will be benched from their anchoring duties at ABC News’ “GMA3′ while the news division weighs the effect their recent disclosure of a romantic relationship might have on t… [+2795 chars]"
+    },
+    {
+      "source": {
+        "id": "usa-today",
+        "name": "USA Today"
+      },
+      "author": "Brent Schrotenboer, USA TODAY",
+      "title": "Deion Sanders brings tension to first meeting as Colorado head coach - USA TODAY",
+      "description": "Deion Sanders and his son Deion Jr. are turning Colorado into a reality show for a new age of college football.",
+      "url": "https://www.usatoday.com/story/sports/ncaaf/2022/12/05/deion-sanders-brings-tension-first-meeting-colorado-head-coach/10837178002/",
+      "urlToImage": "https://www.gannett-cdn.com/presto/2022/12/05/USAT/0b933129-73d8-4e41-bee7-9c54567977c9-deion1205.jpg?auto=webp&crop=8373,4710,x1,y476&format=pjpg&width=1200",
+      "publishedAt": "2022-12-05T14:53:42Z",
+      "content": "BOULDER, Colo. — New Colorado head football coach Deion Sanders met his new players for the first time Sunday and told them exactly what he would do to them.\r\nIt wasn’t nice. He said that some of the… [+6428 chars]"
+    },
+    {
+      "source": {
+        "id": "cnn",
+        "name": "CNN"
+      },
+      "author": "Julia Horowitz",
+      "title": "The West just scrambled the oil market. What happens next is up to Russia - CNN",
+      "description": "Most Russian crude oil exports to Europe are now banned, marking the boldest effort yet by the West to pile financial pressure on President Vladimir Putin as his brutal war in Ukraine enters its tenth month.",
+      "url": "https://www.cnn.com/2022/12/05/energy/russia-oil-embargo-price-cap-explainer/index.html",
+      "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/221205114756-russia-oil-embargo-price-cap-explainer-file-042222.jpg?c=16x9&q=w_800,c_fill",
+      "publishedAt": "2022-12-05T14:49:00Z",
+      "content": "Most Russian crude oil exports to Europe are now banned, marking the boldest effort yet by the West to pile financial pressure on President Vladimir Putin as his brutal war in Ukraine enters its tent… [+5983 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "CNBC"
+      },
+      "author": "Rebecca Picciotto",
+      "title": "VF Corp. lowers full-year guidance, announces CEO is retiring - CNBC",
+      "description": "VF Corporation on Monday lowered its revenue and earnings expectations for the second half of its fiscal year.",
+      "url": "https://www.cnbc.com/2022/12/05/vf-corp-lowers-full-year-guidance-announces-ceo-is-retiring.html",
+      "urlToImage": "https://image.cnbcfm.com/api/v1/image/107161009-1670249922070-gettyimages-1231735534-IGOR7549.jpeg?v=1670251521&w=1920&h=1080",
+      "publishedAt": "2022-12-05T14:45:21Z",
+      "content": "VF Corporation, owner of The North Face and Timberland, on Monday lowered its revenue and earnings expectations for the second half of its fiscal year and said its chairman and chief executive is ret… [+1240 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Gizmodo.com"
+      },
+      "author": "Andrew Liszewski",
+      "title": "Cooler Master's Orb X Is an Immersive Gaming (or Work) Pod - Gizmodo",
+      "description": "The company doesn't know how much it will cost, but a waiting list is already available.",
+      "url": "https://gizmodo.com/cooler-master-orb-x-gamepod-gaming-chair-workstation-1849853259",
+      "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/ea79ca9e40d382f73020e072954c4836.jpg",
+      "publishedAt": "2022-12-05T14:45:00Z",
+      "content": "Three years and counting of a global pandemic has put the strain on a lot of peoples social lives: a problem that Cooler Master has decided to further exacerbate, rather than resolve, with a new mult… [+2112 chars]"
+    }
+  ]
+}
