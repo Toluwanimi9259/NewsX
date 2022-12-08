@@ -64,6 +64,4 @@ class NewsViewModel(
         return false
 
     }
-
-
 }

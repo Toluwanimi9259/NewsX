@@ -17,15 +17,15 @@ import javax.inject.Inject
 class MainActivity : AppCompatActivity() {
 
     @Inject
-    lateinit var viewModelFactory: NewsViewModelFactory
+    lateinit var viewModelFactory : NewsViewModelFactory
 
-    lateinit var newsViewModel: NewsViewModel
+    lateinit var newsViewModel : NewsViewModel
 
-    lateinit var binding: ActivityMainBinding
+    lateinit var binding : ActivityMainBinding
 
     lateinit var navHostFragment : NavHostFragment
 
-    lateinit var navController: NavController
+    lateinit var navController : NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
