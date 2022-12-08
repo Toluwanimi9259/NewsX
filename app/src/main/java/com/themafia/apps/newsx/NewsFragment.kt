@@ -21,7 +21,7 @@ class NewsFragment : Fragment() {
 
     private lateinit var fragmentNewsBinding: FragmentNewsBinding
 
-    private lateinit var newsAdapter: Adapter
+    lateinit var newsAdapter: Adapter
 
     private val country = "us"
     private val page = 1
@@ -38,6 +38,7 @@ class NewsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         fragmentNewsBinding = FragmentNewsBinding.bind(view)
         newsViewModel = (activity as MainActivity).newsViewModel
+        newsAdapter = (activity as MainActivity).adapter
         initRecyclerView()
         viewNews()
 

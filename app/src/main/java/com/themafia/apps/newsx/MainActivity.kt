@@ -8,6 +8,7 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.themafia.apps.newsx.databinding.ActivityMainBinding
+import com.themafia.apps.newsx.presentation.adapters.Adapter
 import com.themafia.apps.newsx.presentation.viewmodel.NewsViewModel
 import com.themafia.apps.newsx.presentation.viewmodel.NewsViewModelFactory
 import dagger.hilt.android.AndroidEntryPoint
@@ -18,6 +19,9 @@ class MainActivity : AppCompatActivity() {
 
     @Inject
     lateinit var viewModelFactory : NewsViewModelFactory
+
+    @Inject
+    lateinit var adapter: Adapter
 
     lateinit var newsViewModel : NewsViewModel
 
