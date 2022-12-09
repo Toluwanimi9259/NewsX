@@ -2,10 +2,15 @@ package com.themafia.apps.newsx.presentation.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.core.os.bundleOf
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.themafia.apps.newsx.R
 import com.themafia.apps.newsx.data.retrofit.dataclasses.Article
 import com.themafia.apps.newsx.databinding.NewsListItemBinding
 
@@ -46,6 +51,16 @@ class Adapter() : RecyclerView.Adapter<Adapter.NewsViewHolder>() {
             binding.tvPublishedAt.text = article.publishedAt
 
             Glide.with(binding.ivArticleImage.context).load(article.urlToImage).into(binding.ivArticleImage)
+
+            binding.root.setOnClickListener {
+                Toast.makeText(binding.linLayout.context, "RECYCLER VIEW MOTHERFUCKER ", Toast.LENGTH_SHORT).show()
+                val bundle = bundleOf("news_url" to article.url)
+                it.findNavController().navigate(R.id.action_newsFragment_to_newsDetailFragment , bundle)
+            }
         }
     }
+
+
+
+
 }
