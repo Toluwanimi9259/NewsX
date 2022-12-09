@@ -53,7 +53,7 @@ class Adapter() : RecyclerView.Adapter<Adapter.NewsViewHolder>() {
             Glide.with(binding.ivArticleImage.context).load(article.urlToImage).into(binding.ivArticleImage)
 
             binding.root.setOnClickListener {
-                Toast.makeText(binding.linLayout.context, "RECYCLER VIEW MOTHERFUCKER ", Toast.LENGTH_SHORT).show()
+                Toast.makeText(binding.linLayout.context, "Loading...", Toast.LENGTH_SHORT).show()
                 val bundle = bundleOf("news_url" to article.url)
                 it.findNavController().navigate(R.id.action_newsFragment_to_newsDetailFragment , bundle)
             }
