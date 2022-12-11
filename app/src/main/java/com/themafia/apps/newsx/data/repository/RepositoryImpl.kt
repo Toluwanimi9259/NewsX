@@ -21,11 +21,11 @@ class RepositoryImpl(
         return Resource.Error(response.message())
     }
 
-    override suspend fun getNewsHeadlines(country : String , page : Int): Resource<APIResponse> = responseToResource(remoteDataSource.getTopHeadlines(country, page))
+    override suspend fun getNewsHeadlines(country : String , page : Int): Resource<APIResponse> =
+        responseToResource(remoteDataSource.getTopHeadlines(country, page))
 
-    override suspend fun getSearchedNews(searchQuery: String): Resource<APIResponse> {
-        TODO("Not yet implemented")
-    }
+    override suspend fun getSearchedNews(country : String , page : Int , searchQuery: String): Resource<APIResponse> =
+        responseToResource(remoteDataSource.getSearchedTopHeadlines(country , page , searchQuery))
 
     override fun getSavedNews(): Flow<List<Article>> {
         TODO("Not yet implemented")

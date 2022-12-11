@@ -9,6 +9,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AbsListView
 import android.widget.Toast
+import androidx.appcompat.widget.SearchView
+import androidx.appcompat.widget.SearchView.OnQueryTextListener
 import androidx.core.os.bundleOf
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
@@ -18,6 +20,9 @@ import com.themafia.apps.newsx.data.util.Resource
 import com.themafia.apps.newsx.databinding.FragmentNewsBinding
 import com.themafia.apps.newsx.presentation.adapters.Adapter
 import com.themafia.apps.newsx.presentation.viewmodel.NewsViewModel
+import kotlinx.coroutines.MainScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class NewsFragment : Fragment() {
 
@@ -50,6 +55,7 @@ class NewsFragment : Fragment() {
 //        Toast.makeText(activity, "NORMAL MOTHERFUCKER", Toast.LENGTH_LONG).show()
         initRecyclerView()
         viewNews()
+        setSearchView()
     }
 
     private fun viewNews() {
@@ -57,6 +63,66 @@ class NewsFragment : Fragment() {
         newsViewModel.newsHeadlines.observe(viewLifecycleOwner, Observer {
             when (it) {
 
+                is Resource.Success -> {
+                    hideProgressBar()
+                    it.data?.let {
+                        Log.i("MYTAG", "News Fragment  Success  ${it.articles.toList().size}")
+                        newsAdapter.differ.submitList(it.articles.toList())
+                        pages = if (it.totalResults % 20 == 0) {
+                            it.totalResults / 20
+                        } else {
+                            it.totalResults / 20 + 1
+                        }
+                        isLastPage = page == pages
+                    }
+                }
+
+                is Resource.Loading -> {
+                    showProgressBar()
+                }
+
+                is Resource.Error -> {
+                    hideProgressBar()
+                    Toast.makeText(activity, "An error occurred : ${it.message}", Toast.LENGTH_LONG)
+                        .show()
+                }
+            }
+        })
+    }
+
+    private fun setSearchView(){
+        fragmentNewsBinding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
+            android.widget.SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                viewSearchedNews("$query")
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                MainScope().launch {
+                    delay(3000)
+                    viewSearchedNews("$newText")
+                }
+                return false
+            }
+
+        })
+
+        fragmentNewsBinding.searchView.setOnCloseListener(object : SearchView.OnCloseListener,
+            android.widget.SearchView.OnCloseListener {
+            override fun onClose(): Boolean {
+                initRecyclerView()
+                viewNews()
+                return false
+            }
+
+        })
+    }
+
+    private fun viewSearchedNews(keyWord : String){
+        newsViewModel.getSearchedNewsHeadlines(country , page , keyWord)
+        newsViewModel.searchedNewsHeadlines.observe(viewLifecycleOwner , Observer {
+            when (it) {
                 is Resource.Success -> {
                     hideProgressBar()
                     it.data?.let {

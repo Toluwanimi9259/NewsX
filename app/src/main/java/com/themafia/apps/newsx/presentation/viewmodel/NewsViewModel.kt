@@ -12,14 +12,17 @@ import androidx.lifecycle.viewModelScope
 import com.themafia.apps.newsx.data.retrofit.dataclasses.APIResponse
 import com.themafia.apps.newsx.data.util.Resource
 import com.themafia.apps.newsx.domain.usecases.GetNewsHeadlinesUseCase
+import com.themafia.apps.newsx.domain.usecases.GetSearchedNewsUseCase
 import kotlinx.coroutines.launch
 
 class NewsViewModel(
     private val app : Application,
-    private val getNewsHeadlinesUseCase: GetNewsHeadlinesUseCase
+    private val getNewsHeadlinesUseCase: GetNewsHeadlinesUseCase,
+    private val getSearchedNewsUseCase: GetSearchedNewsUseCase
     ) : AndroidViewModel(app) {
 
     val newsHeadlines : MutableLiveData<Resource<APIResponse>> = MutableLiveData()
+
 
     fun getNewsHeadLines(country : String, page : Int) = viewModelScope.launch {
         newsHeadlines.postValue( Resource.Loading())
@@ -35,6 +38,25 @@ class NewsViewModel(
             newsHeadlines.postValue(Resource.Error(e.message.toString()))
         }
 
+    }
+
+    // Search
+
+    val searchedNewsHeadlines : MutableLiveData<Resource<APIResponse>> = MutableLiveData()
+
+    fun getSearchedNewsHeadlines(country : String , page : Int , keyword : String) = viewModelScope.launch {
+        searchedNewsHeadlines.postValue(Resource.Loading())
+
+        try {
+            if (isNetworkAvailable(app)){
+                val searchedNewsResult = getSearchedNewsUseCase.execute(country,page,keyword)
+                searchedNewsHeadlines.postValue(searchedNewsResult)
+            }else{
+                searchedNewsHeadlines.postValue(Resource.Error("Internet Connection Problem"))
+            }
+        }catch (e : Exception){
+            searchedNewsHeadlines.postValue(Resource.Error(e.message.toString()))
+        }
     }
 
     private fun isNetworkAvailable(context: Context?):Boolean{

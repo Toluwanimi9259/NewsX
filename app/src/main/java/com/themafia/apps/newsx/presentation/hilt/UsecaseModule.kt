@@ -2,6 +2,7 @@ package com.themafia.apps.newsx.presentation.hilt
 
 import com.themafia.apps.newsx.domain.repository.Repository
 import com.themafia.apps.newsx.domain.usecases.GetNewsHeadlinesUseCase
+import com.themafia.apps.newsx.domain.usecases.GetSearchedNewsUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -16,5 +17,11 @@ class UsecaseModule {
     @Provides
     fun provideNewsHeadlinesModule(repository: Repository) : GetNewsHeadlinesUseCase{
         return GetNewsHeadlinesUseCase(repository)
+    }
+
+    @Singleton
+    @Provides
+    fun provideSearchedNewsHeadlinesModule(repository: Repository) : GetSearchedNewsUseCase {
+        return GetSearchedNewsUseCase(repository)
     }
 }
