@@ -20,7 +20,7 @@ interface NewsService {
 
     @GET("v2/top-headlines")
     suspend fun getSearchedTopHeadlines(
-        @Query("country")
+        @Query("country")  // This method works only for this country ie searches headlines in this country
         country : String,
         @Query("q")
         searchKeyword: String,
@@ -29,5 +29,14 @@ interface NewsService {
         @Query("apiKey")
         apiKey : String = BuildConfig.API_KEY
     ) : Response<APIResponse>
+
+    @GET("v2/top-headlines")
+    suspend fun getSearchedTopHeadlines2(
+        @Query("q")
+        searchKeyword: String,
+        @Query("apiKey")
+        apiKey : String = BuildConfig.API_KEY
+    ) : Response<APIResponse>
+
 
 }

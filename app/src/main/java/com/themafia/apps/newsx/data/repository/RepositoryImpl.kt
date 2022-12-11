@@ -27,6 +27,9 @@ class RepositoryImpl(
     override suspend fun getSearchedNews(country : String , page : Int , searchQuery: String): Resource<APIResponse> =
         responseToResource(remoteDataSource.getSearchedTopHeadlines(country , page , searchQuery))
 
+    override suspend fun getSearchedNews2(keyword: String): Resource<APIResponse> =
+        responseToResource(remoteDataSource.getTopSearchedHeadlines2(keyword))
+
     override fun getSavedNews(): Flow<List<Article>> {
         TODO("Not yet implemented")
     }

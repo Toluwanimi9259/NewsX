@@ -12,17 +12,18 @@ import androidx.lifecycle.viewModelScope
 import com.themafia.apps.newsx.data.retrofit.dataclasses.APIResponse
 import com.themafia.apps.newsx.data.util.Resource
 import com.themafia.apps.newsx.domain.usecases.GetNewsHeadlinesUseCase
+import com.themafia.apps.newsx.domain.usecases.GetSearchedNews2UseCase
 import com.themafia.apps.newsx.domain.usecases.GetSearchedNewsUseCase
 import kotlinx.coroutines.launch
 
 class NewsViewModel(
     private val app : Application,
     private val getNewsHeadlinesUseCase: GetNewsHeadlinesUseCase,
-    private val getSearchedNewsUseCase: GetSearchedNewsUseCase
+    private val getSearchedNewsUseCase: GetSearchedNewsUseCase,
+    private val getSearchedNews2UseCase: GetSearchedNews2UseCase
     ) : AndroidViewModel(app) {
 
     val newsHeadlines : MutableLiveData<Resource<APIResponse>> = MutableLiveData()
-
 
     fun getNewsHeadLines(country : String, page : Int) = viewModelScope.launch {
         newsHeadlines.postValue( Resource.Loading())
@@ -41,6 +42,7 @@ class NewsViewModel(
     }
 
     // Search
+    // This method works only for this country ie searches headlines in this country
 
     val searchedNewsHeadlines : MutableLiveData<Resource<APIResponse>> = MutableLiveData()
 
@@ -56,6 +58,25 @@ class NewsViewModel(
             }
         }catch (e : Exception){
             searchedNewsHeadlines.postValue(Resource.Error(e.message.toString()))
+        }
+    }
+
+    // O.G Search
+
+    val searchedNews2Headlines : MutableLiveData<Resource<APIResponse>> = MutableLiveData()
+
+    fun getSearchedNews2Headlines(keyword : String) = viewModelScope.launch {
+        searchedNews2Headlines.postValue(Resource.Loading())
+
+        try {
+            if (isNetworkAvailable(app)){
+                val searchedNews2Result = getSearchedNews2UseCase.execute(keyword)
+                searchedNews2Headlines.postValue(searchedNews2Result)
+            }else{
+                searchedNews2Headlines.postValue(Resource.Error("Internet Connection Problem"))
+            }
+        }catch (ex : Exception){
+            searchedNews2Headlines.postValue(Resource.Error(ex.message.toString()))
         }
     }
 

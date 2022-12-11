@@ -7,4 +7,6 @@ interface RemoteDataSource {
     suspend fun getTopHeadlines(country : String , page : Int) : Response<APIResponse>
 
     suspend fun getSearchedTopHeadlines(country : String , page : Int , keyword : String) : Response<APIResponse>
+
+    suspend fun getTopSearchedHeadlines2(keyword : String) : Response<APIResponse>
 }

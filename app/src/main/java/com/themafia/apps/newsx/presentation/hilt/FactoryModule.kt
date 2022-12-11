@@ -2,6 +2,7 @@ package com.themafia.apps.newsx.presentation.hilt
 
 import android.app.Application
 import com.themafia.apps.newsx.domain.usecases.GetNewsHeadlinesUseCase
+import com.themafia.apps.newsx.domain.usecases.GetSearchedNews2UseCase
 import com.themafia.apps.newsx.domain.usecases.GetSearchedNewsUseCase
 import com.themafia.apps.newsx.presentation.viewmodel.NewsViewModelFactory
 import dagger.Module
@@ -16,8 +17,8 @@ class FactoryModule {
 
     @Singleton
     @Provides
-    fun provideViewModelFactory(app : Application , getNewsHeadlinesUseCase: GetNewsHeadlinesUseCase , getSearchedNewsUseCase: GetSearchedNewsUseCase) : NewsViewModelFactory{
-        return NewsViewModelFactory(app, getNewsHeadlinesUseCase , getSearchedNewsUseCase)
+    fun provideViewModelFactory(app : Application , getNewsHeadlinesUseCase: GetNewsHeadlinesUseCase , getSearchedNewsUseCase: GetSearchedNewsUseCase , getSearchedNews2UseCase: GetSearchedNews2UseCase) : NewsViewModelFactory{
+        return NewsViewModelFactory(app, getNewsHeadlinesUseCase , getSearchedNewsUseCase , getSearchedNews2UseCase)
     }
 
 }

@@ -83,7 +83,7 @@ class NewsFragment : Fragment() {
 
                 is Resource.Error -> {
                     hideProgressBar()
-                    Toast.makeText(activity, "An error occurred : ${it.message}", Toast.LENGTH_LONG)
+                    Toast.makeText(activity, "An error occurred : $it", Toast.LENGTH_LONG)
                         .show()
                 }
             }
@@ -120,8 +120,8 @@ class NewsFragment : Fragment() {
     }
 
     private fun viewSearchedNews(keyWord : String){
-        newsViewModel.getSearchedNewsHeadlines(country , page , keyWord)
-        newsViewModel.searchedNewsHeadlines.observe(viewLifecycleOwner , Observer {
+        newsViewModel.getSearchedNews2Headlines(keyWord)
+        newsViewModel.searchedNews2Headlines.observe(viewLifecycleOwner , Observer {
             when (it) {
                 is Resource.Success -> {
                     hideProgressBar()
@@ -143,7 +143,7 @@ class NewsFragment : Fragment() {
 
                 is Resource.Error -> {
                     hideProgressBar()
-                    Toast.makeText(activity, "An error occurred : ${it.message}", Toast.LENGTH_LONG)
+                    Toast.makeText(activity, "An error occurred : $it.", Toast.LENGTH_LONG)
                         .show()
                 }
             }
