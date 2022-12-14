@@ -18,6 +18,8 @@ import com.themafia.apps.newsx.databinding.NewsListItemBinding
 
 class Adapter() : RecyclerView.Adapter<Adapter.NewsViewHolder>() {
 
+    lateinit var location: String
+
     private val callback = object : DiffUtil.ItemCallback<Article>(){
 
         override fun areItemsTheSame(oldItem: Article, newItem: Article): Boolean {
@@ -75,7 +77,13 @@ class Adapter() : RecyclerView.Adapter<Adapter.NewsViewHolder>() {
                 }
 
                 val bundle = bundleOf("news_url" to article.url , "selected_article" to selected_article)
-                it.findNavController().navigate(R.id.action_newsFragment_to_newsDetailFragment , bundle)
+
+                if(location == "savedNews"){
+                    it.findNavController().navigate(R.id.action_savedNewsFragment_to_newsDetailFragment , bundle)
+                }else if(location == "news"){
+                    it.findNavController().navigate(R.id.action_newsFragment_to_newsDetailFragment , bundle)
+                }
+
             }
         }
     }

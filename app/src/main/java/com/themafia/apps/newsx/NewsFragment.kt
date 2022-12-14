@@ -52,6 +52,7 @@ class NewsFragment : Fragment() {
         fragmentNewsBinding = FragmentNewsBinding.bind(view)
         newsViewModel = (activity as MainActivity).newsViewModel
         newsAdapter = (activity as MainActivity).adapter
+        newsAdapter.location = "news"
 //        Toast.makeText(activity, "NORMAL MOTHERFUCKER", Toast.LENGTH_LONG).show()
         initRecyclerView()
         viewNews()

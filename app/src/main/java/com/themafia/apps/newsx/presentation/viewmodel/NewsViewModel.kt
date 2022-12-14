@@ -6,17 +6,12 @@ import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
 import android.util.Log
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
+import android.util.LogPrinter
+import androidx.lifecycle.*
 import com.themafia.apps.newsx.data.retrofit.dataclasses.APIResponse
 import com.themafia.apps.newsx.data.retrofit.dataclasses.Article
 import com.themafia.apps.newsx.data.util.Resource
-import com.themafia.apps.newsx.domain.usecases.GetNewsHeadlinesUseCase
-import com.themafia.apps.newsx.domain.usecases.GetSearchedNews2UseCase
-import com.themafia.apps.newsx.domain.usecases.GetSearchedNewsUseCase
-import com.themafia.apps.newsx.domain.usecases.SaveNewsUseCase
+import com.themafia.apps.newsx.domain.usecases.*
 import kotlinx.coroutines.launch
 
 class NewsViewModel(
@@ -24,7 +19,8 @@ class NewsViewModel(
     private val getNewsHeadlinesUseCase: GetNewsHeadlinesUseCase,
     private val getSearchedNewsUseCase: GetSearchedNewsUseCase,
     private val getSearchedNews2UseCase: GetSearchedNews2UseCase,
-    private val saveNewsUseCase: SaveNewsUseCase
+    private val saveNewsUseCase: SaveNewsUseCase,
+    private val getSavedNewsUseCase: GetSavedNewsUseCase
     ) : AndroidViewModel(app) {
 
     val newsHeadlines : MutableLiveData<Resource<APIResponse>> = MutableLiveData()
@@ -50,7 +46,7 @@ class NewsViewModel(
     // Search
     // This method works only for this country ie searches headlines in this country
 
-    val searchedNewsHeadlines : MutableLiveData<Resource<APIResponse>> = MutableLiveData()
+    private val searchedNewsHeadlines : MutableLiveData<Resource<APIResponse>> = MutableLiveData()
 
     fun getSearchedNewsHeadlines(country : String , page : Int , keyword : String) = viewModelScope.launch {
         searchedNewsHeadlines.postValue(Resource.Loading())
@@ -89,6 +85,13 @@ class NewsViewModel(
     // Save News
     fun saveNewsToDB(article: Article) = viewModelScope.launch {
         saveNewsUseCase.execute(article)
+    }
+
+    // Get Saved News
+    fun getSavedArticles() = liveData {
+        getSavedNewsUseCase.execute().collect{
+            emit(it)
+        }
     }
 
     private fun isNetworkAvailable(context: Context?):Boolean{

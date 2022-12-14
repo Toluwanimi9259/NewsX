@@ -32,9 +32,7 @@ class RepositoryImpl(
     override suspend fun getSearchedNews2(keyword: String): Resource<APIResponse> =
         responseToResource(remoteDataSource.getTopSearchedHeadlines2(keyword))
 
-    override fun getSavedNews(): Flow<List<Article>> {
-        TODO("Not yet implemented")
-    }
+    override fun getSavedNews(): Flow<List<Article>> = localDataSource.getAllSavedArticles()
 
     override suspend fun deleteNews(article: Article) {
         TODO("Not yet implemented")
