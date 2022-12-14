@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
+import com.themafia.apps.newsx.data.retrofit.dataclasses.Article
 import com.themafia.apps.newsx.databinding.ActivityMainBinding
 import com.themafia.apps.newsx.presentation.adapters.Adapter
 import com.themafia.apps.newsx.presentation.viewmodel.NewsViewModel
@@ -43,6 +44,7 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNav.setupWithNavController(navController)
 
         newsViewModel = ViewModelProvider(this , viewModelFactory)[NewsViewModel::class.java]
+
 
     }
 }

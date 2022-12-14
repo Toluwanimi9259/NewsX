@@ -1,0 +1,18 @@
+package com.themafia.apps.newsx.data.room.converter
+
+import androidx.room.TypeConverter
+import com.themafia.apps.newsx.data.retrofit.dataclasses.Source
+
+
+class Converters {
+
+    @TypeConverter
+    fun fromSource(source : Source) : String{
+        return source.name
+    }
+
+    @TypeConverter
+    fun toSource(name : String) : Source{
+        return Source(name , name)
+    }
+}

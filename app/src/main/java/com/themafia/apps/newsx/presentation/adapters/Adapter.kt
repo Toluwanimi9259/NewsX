@@ -1,5 +1,6 @@
 package com.themafia.apps.newsx.presentation.adapters
 
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.themafia.apps.newsx.R
 import com.themafia.apps.newsx.data.retrofit.dataclasses.Article
+import com.themafia.apps.newsx.data.retrofit.dataclasses.Source
 import com.themafia.apps.newsx.databinding.NewsListItemBinding
 
 class Adapter() : RecyclerView.Adapter<Adapter.NewsViewHolder>() {
@@ -43,10 +45,11 @@ class Adapter() : RecyclerView.Adapter<Adapter.NewsViewHolder>() {
     override fun getItemCount()  = differ.currentList.size
 
     inner class NewsViewHolder(private val binding: NewsListItemBinding) : RecyclerView.ViewHolder(binding.root){
+        lateinit var selected_article : Article
         fun bind(article: Article){
 
             binding.tvDescription.text = article.description
-            binding.tvSource.text = article.source.name
+            binding.tvSource.text = article.source?.name
             binding.tvTitle.text = article.title
             binding.tvPublishedAt.text = article.publishedAt
 
@@ -54,7 +57,24 @@ class Adapter() : RecyclerView.Adapter<Adapter.NewsViewHolder>() {
 
             binding.root.setOnClickListener {
                 Toast.makeText(binding.linLayout.context, "Loading...", Toast.LENGTH_SHORT).show()
-                val bundle = bundleOf("news_url" to article.url)
+
+                if(article.source!!.id == null){
+                    selected_article  = Article(
+                        article.id ,
+                        article.author ,
+                        article.content ,
+                        article.description ,
+                        article.publishedAt ,
+                        source = Source( article.source.name.lowercase(), article.source.name),
+                        article.title,
+                        article.url,
+                        article.urlToImage
+                    )
+                }else{
+                    selected_article = article
+                }
+
+                val bundle = bundleOf("news_url" to article.url , "selected_article" to selected_article)
                 it.findNavController().navigate(R.id.action_newsFragment_to_newsDetailFragment , bundle)
             }
         }

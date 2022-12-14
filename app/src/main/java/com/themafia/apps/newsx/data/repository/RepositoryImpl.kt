@@ -1,5 +1,6 @@
 package com.themafia.apps.newsx.data.repository
 
+import com.themafia.apps.newsx.data.repository.dataSource.LocalDataSource
 import com.themafia.apps.newsx.data.repository.dataSource.RemoteDataSource
 import com.themafia.apps.newsx.data.retrofit.dataclasses.APIResponse
 import com.themafia.apps.newsx.data.retrofit.dataclasses.Article
@@ -9,7 +10,8 @@ import kotlinx.coroutines.flow.Flow
 import retrofit2.Response
 
 class RepositoryImpl(
-    private val remoteDataSource: RemoteDataSource
+    private val remoteDataSource: RemoteDataSource,
+    private val localDataSource: LocalDataSource
 ) : Repository {
 
     private fun responseToResource(response : Response<APIResponse>) : Resource<APIResponse>{
@@ -39,7 +41,7 @@ class RepositoryImpl(
     }
 
     override suspend fun saveNews(article: Article) {
-        TODO("Not yet implemented")
+        localDataSource.saveArticleToDB(article)
     }
 
 }

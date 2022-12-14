@@ -5,22 +5,26 @@ import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
+import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.themafia.apps.newsx.data.retrofit.dataclasses.APIResponse
+import com.themafia.apps.newsx.data.retrofit.dataclasses.Article
 import com.themafia.apps.newsx.data.util.Resource
 import com.themafia.apps.newsx.domain.usecases.GetNewsHeadlinesUseCase
 import com.themafia.apps.newsx.domain.usecases.GetSearchedNews2UseCase
 import com.themafia.apps.newsx.domain.usecases.GetSearchedNewsUseCase
+import com.themafia.apps.newsx.domain.usecases.SaveNewsUseCase
 import kotlinx.coroutines.launch
 
 class NewsViewModel(
     private val app : Application,
     private val getNewsHeadlinesUseCase: GetNewsHeadlinesUseCase,
     private val getSearchedNewsUseCase: GetSearchedNewsUseCase,
-    private val getSearchedNews2UseCase: GetSearchedNews2UseCase
+    private val getSearchedNews2UseCase: GetSearchedNews2UseCase,
+    private val saveNewsUseCase: SaveNewsUseCase
     ) : AndroidViewModel(app) {
 
     val newsHeadlines : MutableLiveData<Resource<APIResponse>> = MutableLiveData()
@@ -34,9 +38,11 @@ class NewsViewModel(
                 newsHeadlines.postValue(newsResult)
             }else {
                 newsHeadlines.postValue(Resource.Error("Internet Connection Problem"))
+                Log.d("MYTAG" , "Internet Connection Problem")
             }
         }catch (e : Exception){
             newsHeadlines.postValue(Resource.Error(e.message.toString()))
+            Log.d("MYTAG" , "Error : " + e.message.toString())
         }
 
     }
@@ -78,6 +84,11 @@ class NewsViewModel(
         }catch (ex : Exception){
             searchedNews2Headlines.postValue(Resource.Error(ex.message.toString()))
         }
+    }
+
+    // Save News
+    fun saveNewsToDB(article: Article) = viewModelScope.launch {
+        saveNewsUseCase.execute(article)
     }
 
     private fun isNetworkAvailable(context: Context?):Boolean{

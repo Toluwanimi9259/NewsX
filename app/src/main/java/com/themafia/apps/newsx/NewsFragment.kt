@@ -66,7 +66,7 @@ class NewsFragment : Fragment() {
                 is Resource.Success -> {
                     hideProgressBar()
                     it.data?.let {
-                        Log.i("MYTAG", "News Fragment  Success  ${it.articles.toList().size}")
+                        Log.d("MYTAG", "News Fragment  Success  ${it.articles.toList()}")
                         newsAdapter.differ.submitList(it.articles.toList())
                         pages = if (it.totalResults % 20 == 0) {
                             it.totalResults / 20
@@ -83,7 +83,8 @@ class NewsFragment : Fragment() {
 
                 is Resource.Error -> {
                     hideProgressBar()
-                    Toast.makeText(activity, "An error occurred : $it", Toast.LENGTH_LONG)
+                    Log.d("MYTAG" , "An error occurred View" + it.message)
+                    Toast.makeText(activity, "An error occurred An error occurred View : " + it.message, Toast.LENGTH_LONG)
                         .show()
                 }
             }
@@ -100,7 +101,7 @@ class NewsFragment : Fragment() {
 
             override fun onQueryTextChange(newText: String?): Boolean {
                 MainScope().launch {
-                    delay(3000)
+//                    delay(3000)
                     viewSearchedNews("$newText")
                 }
                 return false
@@ -126,7 +127,7 @@ class NewsFragment : Fragment() {
                 is Resource.Success -> {
                     hideProgressBar()
                     it.data?.let {
-                        Log.i("MYTAG", "News Fragment  Success  ${it.articles.toList().size}")
+                        Log.d("MYTAG", "News Fragment  Success  ${it.articles.toList()}")
                         newsAdapter.differ.submitList(it.articles.toList())
                         pages = if (it.totalResults % 20 == 0) {
                             it.totalResults / 20
@@ -143,7 +144,8 @@ class NewsFragment : Fragment() {
 
                 is Resource.Error -> {
                     hideProgressBar()
-                    Toast.makeText(activity, "An error occurred : $it.", Toast.LENGTH_LONG)
+                    Log.d("MYTAG" , "An error occurred " + it.message)
+                    Toast.makeText(activity, "An error occurred " + it.message, Toast.LENGTH_LONG)
                         .show()
                 }
             }

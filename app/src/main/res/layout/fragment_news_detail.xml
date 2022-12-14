@@ -8,23 +8,24 @@
     tools:context=".NewsDetailFragment">
 
 
-    <ProgressBar
-        android:id="@+id/progressBar2"
-        style="?android:attr/progressBarStyle"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabSaveNews"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:visibility="invisible"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        app:backgroundTint="@color/search_background"
+        android:src="@drawable/ic_baseline_save_2433"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/webView" />
+        android:contentDescription="Save Image"
+        android:focusable="true" />
 
     <WebView
         android:id="@+id/webView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-298dp">
+        android:layout_height="match_parent">
 
     </WebView>
 </androidx.constraintlayout.widget.ConstraintLayout>
