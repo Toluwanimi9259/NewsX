@@ -21,7 +21,8 @@ class FactoryModule {
         getSearchedNewsUseCase: GetSearchedNewsUseCase ,
         getSearchedNews2UseCase: GetSearchedNews2UseCase,
         saveNewsUseCase: SaveNewsUseCase,
-        getSavedNewsUseCase: GetSavedNewsUseCase
+        getSavedNewsUseCase: GetSavedNewsUseCase,
+        deleteSavedNewsUseCase: DeleteSavedNewsUseCase
     ) : NewsViewModelFactory{
         return NewsViewModelFactory(
             app,
@@ -29,7 +30,8 @@ class FactoryModule {
             getSearchedNewsUseCase ,
             getSearchedNews2UseCase ,
             saveNewsUseCase,
-            getSavedNewsUseCase
+            getSavedNewsUseCase,
+            deleteSavedNewsUseCase
         )
     }
 

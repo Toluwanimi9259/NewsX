@@ -11,4 +11,8 @@ class LocalDataSourceImpl(private val articleDAO: ArticleDAO) : LocalDataSource 
     }
 
     override fun getAllSavedArticles(): Flow<List<Article>> = articleDAO.getAllSavedArticles()
+
+    override suspend fun deleteArticle(article: Article) {
+        articleDAO.deleteArticle(article)
+    }
 }

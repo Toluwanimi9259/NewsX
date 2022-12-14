@@ -41,4 +41,10 @@ class UsecaseModule {
     fun provideGetSavedNewsModule(repository: Repository) : GetSavedNewsUseCase{
         return GetSavedNewsUseCase(repository)
     }
+
+    @Singleton
+    @Provides
+    fun provideDeleteSavedNewsModule(repository: Repository) : DeleteSavedNewsUseCase{
+       return  DeleteSavedNewsUseCase(repository)
+    }
 }
