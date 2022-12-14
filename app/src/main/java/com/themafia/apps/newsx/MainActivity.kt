@@ -21,8 +21,8 @@ class MainActivity : AppCompatActivity() {
     @Inject
     lateinit var viewModelFactory : NewsViewModelFactory
 
-    @Inject
-    lateinit var adapter: Adapter
+//    @Inject
+//    lateinit var adapter: Adapter
 
     lateinit var newsViewModel : NewsViewModel
 

@@ -51,8 +51,8 @@ class NewsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         fragmentNewsBinding = FragmentNewsBinding.bind(view)
         newsViewModel = (activity as MainActivity).newsViewModel
-        newsAdapter = (activity as MainActivity).adapter
-        newsAdapter.location = "news"
+//        newsAdapter = (activity as MainActivity).adapter
+//        newsAdapter.location = "news"
 //        Toast.makeText(activity, "NORMAL MOTHERFUCKER", Toast.LENGTH_LONG).show()
         initRecyclerView()
         viewNews()
@@ -154,7 +154,7 @@ class NewsFragment : Fragment() {
     }
 
     private fun initRecyclerView() {
-        newsAdapter = Adapter()
+        newsAdapter = Adapter("news")
         fragmentNewsBinding.rvNews.apply {
             adapter = newsAdapter
             layoutManager = LinearLayoutManager(activity)

@@ -16,9 +16,7 @@ import com.themafia.apps.newsx.data.retrofit.dataclasses.Article
 import com.themafia.apps.newsx.data.retrofit.dataclasses.Source
 import com.themafia.apps.newsx.databinding.NewsListItemBinding
 
-class Adapter() : RecyclerView.Adapter<Adapter.NewsViewHolder>() {
-
-    lateinit var location: String
+class Adapter(var location: String) : RecyclerView.Adapter<Adapter.NewsViewHolder>() {
 
     private val callback = object : DiffUtil.ItemCallback<Article>(){
 

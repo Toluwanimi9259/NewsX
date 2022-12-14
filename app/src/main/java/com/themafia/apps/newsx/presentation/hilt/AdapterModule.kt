@@ -14,7 +14,7 @@ class AdapterModule {
     @Singleton
     @Provides
     fun provideNewsAdapter() : Adapter{
-        return Adapter()
+        return Adapter("news")
     }
 
 }

@@ -35,9 +35,11 @@ class SavedNewsFragment : Fragment() {
 
         newsViewModel = (activity as MainActivity).newsViewModel
 
-        newsAdapter = (activity as MainActivity).adapter
+        newsAdapter = Adapter("savedNews")
 
-        newsAdapter.location = "savedNews"
+//        newsAdapter = (activity as MainActivity).adapter
+
+//        newsAdapter.location = "savedNews"
 
         newsViewModel.getSavedArticles().observe(viewLifecycleOwner , Observer {
             newsAdapter.differ.submitList(it)
