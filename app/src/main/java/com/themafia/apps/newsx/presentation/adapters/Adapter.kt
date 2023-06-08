@@ -58,8 +58,8 @@ class Adapter(var location: String) : RecyclerView.Adapter<Adapter.NewsViewHolde
             binding.root.setOnClickListener {
                 Toast.makeText(binding.linLayout.context, "Loading...", Toast.LENGTH_SHORT).show()
 
-                if(article.source!!.id == null){
-                    selected_article  = Article(
+                selected_article = if(article.source!!.id == null){
+                    Article(
                         article.id ,
                         article.author ,
                         article.content ,
@@ -71,7 +71,7 @@ class Adapter(var location: String) : RecyclerView.Adapter<Adapter.NewsViewHolde
                         article.urlToImage
                     )
                 }else{
-                    selected_article = article
+                    article
                 }
 
                 val bundle = bundleOf("news_url" to article.url , "selected_article" to selected_article)
